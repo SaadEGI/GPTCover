@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            width: 95%;
+            font-family: Arial, sans-serif;
+        }
+
+        .rounded-blue {
+            background-image: linear-gradient(to right, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.8));
+            border-radius: 15px;
+            padding: 15px;
+        }
+
+        .rounded-purple {
+            background-image: linear-gradient(to right, rgba(128, 0, 128, 0.5), rgba(128, 0, 128, 0.8));
+            border-radius: 15px;
+            padding: 15px;
+        }
+
+        .rounded-beige {
+            background-color: rgba(245, 222, 179, 0.7);
+            border-radius: 15px;
+            padding: 15px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table tr {
+            border: 1px solid black;
+        }
+
+        table td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="display: flex;">
+        <section class="rounded-blue" style="flex: 1; margin-right: 10px;">
+            <!-- Place the existing form elements here -->
+            <h1>Resume Details</h1>
+            <form id="resumeDetailsForm">
+                <label for="education">Education:</label><br>
+                <textarea id="education" rows="5" cols="40" required></textarea><br><br>
+                <label for="workExperience">Work Experience:</label><br>
+                <textarea id="workExperience" rows="5" cols="40" required></textarea><br><br>
+                <label for="personalProjects">Personal Projects:</label><br>
+                <textarea id="personalProjects" rows="5" cols="40" required></textarea><br><br>
+                <label for="skills">Skills:</label><br>
+                <textarea id="skills" rows="5" cols="40" required></textarea><br><br>
+                <label for="apiKey">ChatGPT API Key:</label><br>
+                <input type="text" id="apiKey" size="40" required><br><br>
+                <input type="submit" value="Save Resume Details">
+            </form>
+        </section>
+        <section class="rounded-purple" style="flex: 1; margin-left: 10px;">
+            <!-- Place the existing table elements here -->
+            <h2>Saved Cover Letters</h2>
+            <table id="savedCoverLettersTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Cover Letter</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="settings.js"></script>
+
+</body>
+
+</html>

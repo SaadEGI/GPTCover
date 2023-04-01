@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ChatGPT Cover Letter Generator</title>
+  <style>
+    body {
+      background-color: #ffe5b4;
+      font-family: Arial, sans-serif;
+      padding: 10px;
+    }
+
+    #generator {
+      background-color: #f5e5ff;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      width: 400px;
+      height: 400px;
+      margin: 10px;
+    }
+
+    #results {
+      background-color: #ffe5cc;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      width: 400px;
+      height: 400px;
+      margin: 10px;
+    }
+
+    #results h2 {
+      margin-top: 0;
+    }
+
+    .cover-letter {
+      background-color: #fffacd;
+      border: 1px solid black;
+      border-radius: 5px;
+      margin-top: 10px;
+      padding: 5px;
+    }
+
+    .button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="generator">
+    <h2>Generate Cover Letter</h2>
+    <form id="coverLetterForm">
+      <label for="jobRequirements">Enter Job Requirements:</label><br><br>
+      <textarea id="jobRequirements" placeholder="Write something.." style="width: 350px"></textarea><br>
+      <label for="language">Cover Letter Language:</label>
+      <select id="language">
+        <option value="English">English</option>
+        <option value="German">German</option>
+      </select><br><br>
+
+      <input id="submitbutton" type="submit" value="Generate Cover Letter">
+    </form>
+  </div>
+
+  <div id="results">
+    <h2>Cover Letter Results</h2>
+    <div id="coverLetterList"></div>
+    <button class="button" id="saveButton" style="display: none;">Save Cover Letter</button>
+    <button class="button" id="optionsButton">View Saved Cover Letters</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
