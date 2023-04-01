@@ -47,6 +47,10 @@
     <li>Push to the branch (<code>git push origin feature/AmazingFeature</code>)</li>
     <li>Open a pull request</li>
   </ol>
+  
+   <h2>Disclaimer</h2>
+  <p>This extension uses the OpenAI API to generate cover letters, and you will need to provide your own API key to use the extension. The OpenAI API is a paid service, and you are responsible for any charges incurred by using the API. Additionally, the generated cover letters may not be suitable for all job applications, and the extension should not be relied upon as a replacement for professional resume and cover letter writing services. All input data, including the resume details and API key, are stored locally in the Chrome browser's storage and are not uploaded or shared with anyone. However, it is recommended that you do not enter any sensitive or confidential information in the extension.</p>
+
 
   <h2 id="license">License</h2>
   <p>MIT</p>
