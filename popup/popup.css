@@ -1,11 +1,127 @@
 body {
-    background-color: #222;
-    color: #eee;
-
-    width: 16rem;
-    height: 4rem;
-}
-
-.special-text {
-    color: red;
-}
+    background-color: #f9d5b5;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #2d2d2d;
+  }
+  
+  #coverLetterForm {
+    background-color: #f3e9f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+  }
+  
+  #coverLetterForm label {
+    display: block;
+    margin-bottom: 10px;
+    color: #2d2d2d;
+  }
+  
+  textarea {
+    resize: none;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    border: 1px solid #2d2d2d;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #2d2d2d;
+  }
+  
+  select {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #2d2d2d;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #2d2d2d;
+  }
+  
+  #submitbutton {
+    background-color: #2d2d2d;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .loading-container {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+  }
+  
+  #save {
+    display: none;
+    margin-top: 20px;
+    color: #2d2d2d;
+  }
+  
+  #savetext {
+    display: none;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #2d2d2d;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #2d2d2d;
+  }
+  
+  #saveButton {
+    display: none;
+    background-color: #2d2d2d;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  #coverLetterResult {
+    background-color: #f9eac8;
+    /* Light beige background */
+    border-radius: 5px;
+    /* Rounded corners */
+    padding: 10px;
+    width: 100%;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    display: none;
+  }
+  
+  #savedCoverLettersTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  #savedCoverLettersTable td, #savedCoverLettersTable th {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+    font-size: 14px;
+    color: #2d2d2d;
+  }
+  
+  #savedCoverLettersTable th {
+    background-color: #67597a
+  

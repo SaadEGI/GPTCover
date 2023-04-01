@@ -1,3 +1,5 @@
+
+
 document.getElementById('resumeDetailsForm').addEventListener('submit', (event) => {
     event.preventDefault();
 
