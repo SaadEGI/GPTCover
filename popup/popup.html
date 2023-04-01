@@ -2,91 +2,99 @@
 <html>
 
 <head>
-  <title>ChatGPT Cover Letter Generator</title>
   <style>
     body {
-      background-color: #ffe5b4;
       font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 400px;
+      /* Fixed width */
+      height: 500px;
+      /* Fixed height */
+      margin: 0;
+      padding: 20px;
+      background-color: rgba(255, 200, 122, 0.2);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
+
+    .loading-container {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      height: 100px;
+    }
+
+    #coverLetterResult {
+      background-color: rgba(128, 0, 128, 0.1);
+      /* Light purple background */
+      border-radius: 5px;
+      /* Rounded corners */
       padding: 10px;
+      width: 100%;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      display: none;
     }
 
-    #generator {
-      background-color: #f5e5ff;
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      width: 400px;
-      height: 400px;
-      margin: 10px;
+    textarea {
+      resize: none;
+      width: 350px;
+      /* Fixed width */
+      height: 200px;
+      /* Fixed height */
     }
 
-    #results {
-      background-color: #ffe5cc;
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      width: 400px;
-      height: 400px;
-      margin: 10px;
-    }
-
-    #results h2 {
-      margin-top: 0;
-    }
-
-    .cover-letter {
-      background-color: #fffacd;
-      border: 1px solid black;
-      border-radius: 5px;
-      margin-top: 10px;
-      padding: 5px;
-    }
-
-    .button {
-      background-color: #4CAF50;
-      border: none;
-      color: white;
-      padding: 10px 20px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin-top: 10px;
-      border-radius: 5px;
-      cursor: pointer;
+    .result-section {
+      padding: 100px;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 
 <body>
-  <div id="generator">
-    <h2>Generate Cover Letter</h2>
-    <form id="coverLetterForm">
-      <label for="jobRequirements">Enter Job Requirements:</label><br><br>
-      <textarea id="jobRequirements" placeholder="Write something.." style="width: 350px"></textarea><br>
-      <label for="language">Cover Letter Language:</label>
-      <select id="language">
-        <option value="English">English</option>
-        <option value="German">German</option>
-      </select><br><br>
+  <h1>ChatGPT Cover Letter Generator</h1>
+  <h2 id="coverLetterTitle" class="result-section" style="display: none;">Generated Cover Letter</h2>
+  <form id="coverLetterForm">
+    <label for="jobRequirements">Enter Job Requirements:</label><br><br>
+    <textarea id="jobRequirements" placeholder="Write something.." style="width: 350px"></textarea><br>
+    <label for="language">Cover Letter Language:</label>
+    <select id="language">
+      <option value="English">English</option>
+      <option value="German">German</option>
+    </select><br><br>
 
-      <input id="submitbutton" type="submit" value="Generate Cover Letter">
-    </form>
+    <input id="submitbutton" type="submit" value="Generate Cover Letter">
+  </form>
+
+
+  <div class="loading-container" id="loadingContainer">
+    <img src="Fountain.gif" alt="Loading..." />
   </div>
 
-  <div id="results">
-    <h2>Cover Letter Results</h2>
-    <div id="coverLetterList"></div>
-    <button class="button" id="saveButton" style="display: none;">Save Cover Letter</button>
-    <button class="button" id="optionsButton">View Saved Cover Letters</button>
-  </div>
 
+
+
+
+  <div class="result-section" id="coverLetterResult"></div>
+
+
+  <label id="saveLabel" for="coverLetterName" style="display: none;">Save Cover Letter:</label><br>
+  <input id="coverLetterName" type="text" name="coverLetterName" placeholder="Write a name.."
+    style="display: none;"><br><br>
+  <button type="button" id="saveCoverLetterButton" style="display: none;">Save</button><br>
+
+
+  <br><br> <button id="openOptionsPage">Check Options Page</button>
+
+  <br><br>
   <script src="popup.js"></script>
 </body>
 
