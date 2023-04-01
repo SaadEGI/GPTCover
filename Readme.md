@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>ChatGPT Cover Letter Generator Chrome Extension</title>
-</head>
 <body>
   <h1>ChatGPT Cover Letter Generator Chrome Extension</h1>
 
